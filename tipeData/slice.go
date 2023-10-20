@@ -1,5 +1,5 @@
 package tipedata
 
-func main() {
-
-}
+// func main() {
+// // gada soal dari pak irvan
+// }
