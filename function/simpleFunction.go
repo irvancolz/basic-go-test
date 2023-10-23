@@ -18,6 +18,8 @@ func sayHello(name string) {
 //3. buat function getTotal yyang akan menerima 3 buah parameter bertipe int, lalu kembalikan nilai dari (a x b) : c) * a + (a + b +c)
 
 func getTotal(a int, b int, c int) {
+
+	// baca catatan
 	a = 10
 	b = 10
 	c = 10
@@ -25,3 +27,7 @@ func getTotal(a int, b int, c int) {
 	hasil := (a*b)/c*a + (a + b + c)
 	fmt.Println(hasil)
 }
+
+// catatan
+// parameter sebaiknya bersifal readonly (tidak dapat dirubah), dari funtion diatas ada kesalahan dimana
+// parameter dari function di reassign valuenya menjadi 10

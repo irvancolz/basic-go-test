@@ -25,6 +25,12 @@ func Number() {
 
 	batangbambuperlayang := 5
 	batangbambuharini := 43
+
+	// baca catatan
 	sisabatangbambusetelahpembuatanuntukhariini := batangbambuharini / batangbambuperlayang
 	fmt.Println(sisabatangbambusetelahpembuatanuntukhariini)
+
+	// catatan
+	// untuk mencari sisa hasil bagi dapat menggunakan operator %, berbeda dengan operator / yang menghasilkan
+	// exact hasil pembagian contoh 7/3 = 2.3333, sedangkan 7%3 = 1.
 }

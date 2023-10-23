@@ -26,6 +26,7 @@ func perulanganFor() {
 	//  2. buat perulangan sebanyak 30 kali dengan setiap perulangannya melakukan print ke konsol berupa "ini merupakan perulangan ke (jumlah perulangan)"
 	// 	apabila mencapai perulangan yang merupakan kelipatan 7 print "ini adalah kelipatan 7"
 	for i := 0; i < 30; i++ {
+		// seharusnya menggunakan ekspressi i%7 == 0
 		if i == 7 {
 			fmt.Println("ini adalah kelipatan 7")
 		}
@@ -35,3 +36,7 @@ func perulanganFor() {
 
 func main() {
 }
+
+// catatan
+//  pelajari bagai mana sebuah perulangan bekerja serta keyword di dalamnya, seperti break & continue dan juga
+// 	kegunaan operator %
