@@ -1,6 +1,7 @@
 package packageusage
 
 import (
+	"log"
 	"sort"
 )
 
@@ -17,19 +18,24 @@ func urutkanangka() {
 	sort.Slice(arrOfInt, func(i, j int) bool {
 		return arrOfInt[i] > arrOfInt[j]
 	})
+	log.Println(arrOfInt)
+
 	// untuk mengurutkan variabel arrOfStr besar ke kecil
 	sort.Slice(arrOfStr, func(i, j int) bool {
 		return arrOfStr[i] > arrOfStr[j]
 	})
+	log.Println(arrOfStr)
 
 	// untuk mengurutkan variabel arrOfIntReversed kecil ke besar
 	sort.Slice(arrOfIntReversed, func(i, j int) bool {
 		return arrOfIntReversed[i] < arrOfIntReversed[j]
 	})
+	log.Println(arrOfIntReversed)
 
 	// untuk mengurutkan variabel arrOfStrReversed kecil ke besar
 	sort.Slice(arrOfStrReversed, func(i, j int) bool {
 		return arrOfStrReversed[i] < arrOfStrReversed[j]
 	})
+	log.Println(arrOfStrReversed)
 
 }

@@ -10,11 +10,12 @@ func waktu() {
 	shibuyaAccident := time.Date(2022, time.December, 24, 0, 0, 0, 0, time.UTC)
 	fmt.Println(shibuyaAccident)
 	//  2. ambil tanggal dari variabel shibuyaAccident ke dalam variable baru
-	variabelbaru1 := shibuyaAccident.Format("24 december 2022")
-	fmt.Println(variabelbaru1)
+	// var layout =
+	variabelbaru1 := shibuyaAccident.Format(time.DateOnly)
+	fmt.Println(variabelbaru1) // 24 december 2022
 	//  3. ambil waktu dari variabel shibuyaAccident ke dalam variable baru
-	variabelbaru2 := shibuyaAccident.Format("00:00;00")
-	fmt.Println(variabelbaru2)
+	variabelbaru2 := shibuyaAccident.Format("24-05-2022")
+	fmt.Println(variabelbaru2) // 00:00:00
 	//  4. format shibuya Accident menjadi 24 desember 2022 pukul 12 malam dan simpan hasilnya dalam variable baru
 	variabelbaru3 := shibuyaAccident.Format("24 desember 2022 pukul 12 malam")
 	fmt.Println(variabelbaru3)

@@ -11,9 +11,14 @@ import (
 // yang bisa disewakan kepada pelanggan. Setiap kali seorang pelanggan ingin menyewa bola,
 // dia akan memberikan 5 bola per jenisnya (untuk sepak bola, bola basket, dan bola voli).
 // Namun, Andi ingin memastikan bahwa setiap kali dia memberikan bola, jumlah bola yang tersisa per jenisnya adalah setidaknya 10.
-// 1. Berapa total bola yang dapat disewakan oleh Andi sebelum dia harus menyediakan lebih banyak bola?
+// 1. Berapa total paket yang dapat disewakan oleh Andi sebelum dia harus menyediakan lebih banyak bola?
 
 func PenyewaanBola() {
+
+	// - aturan penyewaan
+	//  1. setiap kali menyewa akan di berikan 5 bola tiap jenisnya (1 paket = 5 voli, 5 basket, 5 sepak)
+	//  2. setidaknya harus ada 10 bola dari setiap jenis yang tersisa
+
 	bolasepak := 63
 	bolabasket := 48
 	bolavoli := 29
@@ -52,7 +57,11 @@ func rinabelanja() {
 	gulayangharusdibeli := 2.5
 	minyakgorengyangharusdibeli := 4
 	sabunmandiyangharusdibeli := 5
-	totalbelanja := deterjenperbotol*deterjenyangharusdibeli + gulaperkilogram*int(gulayangharusdibeli) + minyakgorengperliter*minyakgorengyangharusdibeli + sabunmandiperbungkus*sabunmandiyangharusdibeli
+	totalbelanja :=
+		(deterjenperbotol * deterjenyangharusdibeli) +
+			(gulaperkilogram * int(gulayangharusdibeli)) +
+			(minyakgorengperliter * minyakgorengyangharusdibeli) +
+			(sabunmandiperbungkus * sabunmandiyangharusdibeli)
 
 	// ini untuk menampilkan sebelum pembulatan
 	fmt.Println(totalbelanja)
