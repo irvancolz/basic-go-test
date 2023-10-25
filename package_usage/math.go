@@ -1,5 +1,10 @@
 package packageusage
 
+import (
+	"fmt"
+	"math"
+)
+
 // tulislah kode program yang dapat menyelesaikan permasalahan berikut
 
 // Andi adalah seorang pemilik toko penyewaan bola. Dia memiliki 63 bola sepak, 48 bola basket, dan 29 bola voli
@@ -7,6 +12,25 @@ package packageusage
 // dia akan memberikan 5 bola per jenisnya (untuk sepak bola, bola basket, dan bola voli).
 // Namun, Andi ingin memastikan bahwa setiap kali dia memberikan bola, jumlah bola yang tersisa per jenisnya adalah setidaknya 10.
 // 1. Berapa total bola yang dapat disewakan oleh Andi sebelum dia harus menyediakan lebih banyak bola?
+
+func PenyewaanBola() {
+	bolasepak := 63
+	bolabasket := 48
+	bolavoli := 29
+	bolayangdiberikanperjenisnya := 5
+	jumlahyangharustersisaperjenisnya := 10
+	totalbolayangdapatdisewakan := 0
+
+	for bolasepak >= jumlahyangharustersisaperjenisnya && bolabasket >= jumlahyangharustersisaperjenisnya && bolavoli >= jumlahyangharustersisaperjenisnya {
+		bolasepak -= bolayangdiberikanperjenisnya
+		bolabasket -= bolayangdiberikanperjenisnya
+		bolavoli -= bolayangdiberikanperjenisnya
+
+		totalbolayangdapatdisewakan += bolayangdiberikanperjenisnya
+	}
+
+	fmt.Println("Total bola yang dapat disewakan sebelum harus menyediakan lebih banyak:", totalbolayangdapatdisewakan)
+}
 
 // Rina pergi berbelanja ke supermarket untuk membeli barang-barang rumah tangga. Dia memiliki daftar belanja yang mencantumkan harga dan jumlah barang yang harus dibeli.
 // Berikut adalah beberapa barang yang ada di daftar belanja Rina:
@@ -18,3 +42,20 @@ package packageusage
 
 // Hitung total belanjaan Rina sebelum pembulatan.
 // Hitung total belanjaan Rina setelah pembulatan ke angka terdekat.
+
+func rinabelanja() {
+	deterjenperbotol := 27500
+	gulaperkilogram := 9750
+	minyakgorengperliter := 18250
+	sabunmandiperbungkus := 12750
+	deterjenyangharusdibeli := 3
+	gulayangharusdibeli := 2.5
+	minyakgorengyangharusdibeli := 4
+	sabunmandiyangharusdibeli := 5
+	totalbelanja := deterjenperbotol*deterjenyangharusdibeli + gulaperkilogram*int(gulayangharusdibeli) + minyakgorengperliter*minyakgorengyangharusdibeli + sabunmandiperbungkus*sabunmandiyangharusdibeli
+
+	// ini untuk menampilkan sebelum pembulatan
+	fmt.Println(totalbelanja)
+	// ini untuk menampilkan setelah pembulatan ke angka terdekat
+	fmt.Println(math.Round(float64(totalbelanja)))
+}
