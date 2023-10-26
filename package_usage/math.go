@@ -22,16 +22,16 @@ func PenyewaanBola() {
 	bolasepak := 63
 	bolabasket := 48
 	bolavoli := 29
-	bolayangdiberikanperjenisnya := 5
+	paketpenyewaan := 5
 	jumlahyangharustersisaperjenisnya := 10
 	totalbolayangdapatdisewakan := 0
 
 	for bolasepak >= jumlahyangharustersisaperjenisnya && bolabasket >= jumlahyangharustersisaperjenisnya && bolavoli >= jumlahyangharustersisaperjenisnya {
-		bolasepak -= bolayangdiberikanperjenisnya
-		bolabasket -= bolayangdiberikanperjenisnya
-		bolavoli -= bolayangdiberikanperjenisnya
+		bolasepak -= paketpenyewaan
+		bolabasket -= paketpenyewaan
+		bolavoli -= paketpenyewaan
 
-		totalbolayangdapatdisewakan += bolayangdiberikanperjenisnya
+		totalbolayangdapatdisewakan += paketpenyewaan
 	}
 
 	fmt.Println("Total bola yang dapat disewakan sebelum harus menyediakan lebih banyak:", totalbolayangdapatdisewakan)
