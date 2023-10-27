@@ -21,3 +21,7 @@ func TestString(t *testing.T) {
 func TestWaktu(t *testing.T) {
 	waktu()
 }
+
+func TestFactorial(t *testing.T) {
+	t.Log(getFactorial(0))
+}

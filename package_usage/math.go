@@ -22,19 +22,27 @@ func PenyewaanBola() {
 	bolasepak := 63
 	bolabasket := 48
 	bolavoli := 29
-	paketpenyewaan := 5
-	jumlahyangharustersisaperjenisnya := 10
-	totalbolayangdapatdisewakan := 0
+	isiBolaTiapPaket := 5
+	MinimumStokBola := 10
+	paketDisewakan := 0
 
-	for bolasepak >= jumlahyangharustersisaperjenisnya && bolabasket >= jumlahyangharustersisaperjenisnya && bolavoli >= jumlahyangharustersisaperjenisnya {
-		bolasepak -= paketpenyewaan
-		bolabasket -= paketpenyewaan
-		bolavoli -= paketpenyewaan
+	// bolaSepakUntukDisewa := bolasepak - MinimumStokBola // 63 -10 = 53
+	// bolaVoliUntukDisewa := bolavoli - MinimumStokBola // 29 - 10 = 19
+	// bolaBasketUntukDisewa := bolabasket - MinimumStokBola // 48 - 10 = 38
 
-		totalbolayangdapatdisewakan += paketpenyewaan
+	//  1 paket = 5 voli + 5 basket + 5 sepak
+
+	// paketdiSewakan = 3
+
+	for bolasepak >= MinimumStokBola && bolabasket >= MinimumStokBola && bolavoli >= MinimumStokBola {
+		bolasepak -= isiBolaTiapPaket
+		bolabasket -= isiBolaTiapPaket
+		bolavoli -= isiBolaTiapPaket
+
+		paketDisewakan++
 	}
 
-	fmt.Println("Total bola yang dapat disewakan sebelum harus menyediakan lebih banyak:", totalbolayangdapatdisewakan)
+	fmt.Println("Total paket yang dapat disewakan sebelum harus menyediakan lebih banyak:", paketDisewakan)
 }
 
 // Rina pergi berbelanja ke supermarket untuk membeli barang-barang rumah tangga. Dia memiliki daftar belanja yang mencantumkan harga dan jumlah barang yang harus dibeli.
